@@ -94,9 +94,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(width: 10),
                     ],
                   ),
-                  CircleAvatar(
-                    radius: 50,
-                    backgroundColor: Colors.grey,
+                  Center(
+                    child: CircleAvatar(
+                      radius: 50,
+                      backgroundColor: Colors.grey,
+                    ),
                   ),
                   SizedBox(height: 20),
                   _buildHeartAndStepsWidgets(),
@@ -152,6 +154,13 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.add,
+          size: 30,
+        ),
+        onPressed: () {},
       ),
     );
   }

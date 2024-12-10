@@ -11,8 +11,20 @@ class _JournalScreenState extends State<JournalScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('Journal'),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        actions: [
+          CircleAvatar(
+            backgroundColor: Colors.blue,
+          ),
+        ],
+      ),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Text('Journal'),
+          ],
+        ),
       ),
     );
   }
