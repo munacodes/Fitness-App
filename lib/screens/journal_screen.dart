@@ -14,8 +14,16 @@ class _JournalScreenState extends State<JournalScreen> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: [
-          CircleAvatar(
-            backgroundColor: Colors.blue,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15.0),
+            child: CircleAvatar(
+              backgroundColor: Colors.blue,
+              foregroundColor: Colors.white,
+              child: Text(
+                'S',
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
           ),
         ],
       ),

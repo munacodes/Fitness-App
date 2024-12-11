@@ -89,7 +89,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       SizedBox(width: 10),
                       CircleAvatar(
-                        backgroundColor: Colors.blue.shade500,
+                        backgroundColor: Colors.blue,
+                        foregroundColor: Colors.white,
+                        child: Text(
+                          'S',
+                          style: TextStyle(fontSize: 20),
+                        ),
                       ),
                       SizedBox(width: 10),
                     ],
@@ -156,6 +161,8 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
         child: Icon(
           Icons.add,
           size: 30,
