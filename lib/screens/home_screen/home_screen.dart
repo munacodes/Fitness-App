@@ -139,7 +139,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   SizedBox(height: 20),
-                  DailyWeeklySection(),
+                  BuildYourDailyGoalsCard(),
                   SizedBox(height: 10),
                   Text(
                     'TRENDS',

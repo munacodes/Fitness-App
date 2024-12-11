@@ -46,7 +46,7 @@ class _GetMoreAdsCardState extends State<GetMoreAdsCard> {
               height: 80,
               width: double.infinity,
               child: Text(
-                'Fit works well when you connect your other health & fitness apps. Finf compatible apps on Google Play to help you stay healthy.',
+                'Fit works well when you connect your other health & fitness apps. Find compatible apps on Google Play to help you stay healthy.',
                 style: Theme.of(context).textTheme.titleSmall,
               ),
             ),

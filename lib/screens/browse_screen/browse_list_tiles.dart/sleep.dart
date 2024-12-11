@@ -48,45 +48,6 @@ class _SleepState extends State<Sleep> {
     );
   }
 
-  _buildCard({
-    required String title,
-    required String subtitle,
-    required Function() onTap,
-  }) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Card(
-        child: Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    title,
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Icon(Icons.arrow_forward_ios, size: 20),
-                ],
-              ),
-              SizedBox(height: 10),
-              Text(
-                subtitle,
-                style: Theme.of(context).textTheme.titleSmall,
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,6 +71,8 @@ class _SleepState extends State<Sleep> {
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
                 SizedBox(height: 20),
+                BuildHowMuchSleepCard(),
+                SizedBox(height: 10),
                 GetMoreAdsCard(),
                 Padding(
                   padding: const EdgeInsets.only(top: 15.0, bottom: 15),
@@ -118,13 +81,13 @@ class _SleepState extends State<Sleep> {
                     style: Theme.of(context).textTheme.titleMedium,
                   ),
                 ),
-                _buildCard(
+                BuildListTileCard(
                   title: 'Sleep duration',
                   subtitle: 'No recent data',
                   onTap: () {},
                 ),
                 SizedBox(height: 20),
-                _buildCard(
+                BuildListTileCard(
                   title: 'Bedtime schedule',
                   subtitle: 'No recent data',
                   onTap: () {},
