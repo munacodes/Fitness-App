@@ -4,22 +4,22 @@ class SearchSection extends SearchDelegate<String> {
   @override
   List<Widget>? buildActions(BuildContext context) {
     return [
-      IconButton(
-        onPressed: () {
+      GestureDetector(
+        onTap: () {
           query = '';
         },
-        icon: const Icon(Icons.clear),
+        child: Icon(Icons.clear),
       ),
     ];
   }
 
   @override
   Widget? buildLeading(BuildContext context) {
-    return IconButton(
-      onPressed: () {
+    return GestureDetector(
+      onTap: () {
         Navigator.pop(context);
       },
-      icon: AnimatedIcon(
+      child: AnimatedIcon(
         icon: AnimatedIcons.menu_arrow,
         progress: transitionAnimation,
       ),

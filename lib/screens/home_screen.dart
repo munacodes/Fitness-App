@@ -1,4 +1,3 @@
-import 'package:fitness_app/constants/export_constants.dart';
 import 'package:fitness_app/widgets/export_widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Text(
                     'Heart Pts',
-                    style: Theme.of(context).textTheme.titleMedium,
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ],
               ),
@@ -40,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Text(
                     'Walk',
-                    style: Theme.of(context).textTheme.titleMedium,
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ],
               ),
@@ -59,11 +58,11 @@ class _HomeScreenState extends State<HomeScreen> {
       children: [
         Text(
           '$number',
-          style: Theme.of(context).textTheme.titleMedium,
+          style: Theme.of(context).textTheme.bodyMedium,
         ),
         Text(
           text,
-          style: Theme.of(context).textTheme.titleMedium,
+          style: Theme.of(context).textTheme.bodyMedium,
         ),
       ],
     );
@@ -73,6 +72,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        titleTextStyle: Theme.of(context).textTheme.titleLarge,
+        iconTheme: IconThemeData(),
         title: Row(
           children: [
             CircleAvatar(
@@ -81,29 +82,6 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Text(
                 'S',
                 style: TextStyle(fontSize: 20),
-              ),
-            ),
-            SizedBox(width: 10),
-            Container(
-              height: 30,
-              width: 80,
-              decoration: BoxDecoration(
-                color: Colors.blue.shade100,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      '1 day',
-                      // style: textSmall,
-                      style: Theme.of(context).textTheme.titleMedium,
-                    ),
-                    Icon(Icons.arrow_forward_ios, size: 15),
-                  ],
-                ),
               ),
             ),
           ],
@@ -191,8 +169,6 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.blue,
-        foregroundColor: Colors.white,
         child: Icon(
           Icons.add,
           size: 30,

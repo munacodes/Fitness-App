@@ -21,7 +21,7 @@ class _BuildHowMuchSleepCardState extends State<BuildHowMuchSleepCard> {
               children: [
                 Text(
                   'How much sleep you need',
-                  style: Theme.of(context).textTheme.titleMedium,
+                  style: Theme.of(context).textTheme.titleLarge,
                 ),
                 Icon(Icons.arrow_forward_ios, size: 20),
               ],
@@ -42,7 +42,7 @@ class _BuildHowMuchSleepCardState extends State<BuildHowMuchSleepCard> {
                     width: double.infinity,
                     child: Text(
                       'Fit works well when you connect your other health & fitness apps. Find compatible apps on Google Play to help you stay healthy.',
-                      style: Theme.of(context).textTheme.titleSmall,
+                      style: Theme.of(context).textTheme.bodySmall,
                     ),
                   ),
                 ),

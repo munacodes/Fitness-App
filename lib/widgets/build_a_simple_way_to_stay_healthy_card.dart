@@ -16,7 +16,7 @@ class _BuildASimpleWayToStayHealthyCardState
       onTap: () {},
       child: Card(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(15.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -25,7 +25,7 @@ class _BuildASimpleWayToStayHealthyCardState
                 children: [
                   Text(
                     'A simple way to stay healthy',
-                    style: Theme.of(context).textTheme.titleMedium,
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                   Icon(Icons.clear, size: 18),
                 ],
@@ -35,13 +35,16 @@ class _BuildASimpleWayToStayHealthyCardState
                 children: [
                   Icon(Icons.favorite, color: Colors.red),
                   SizedBox(width: 5),
-                  Text('Welcome to Fit'),
+                  Text(
+                    'Welcome to Fit',
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
                 ],
               ),
               SizedBox(height: 10),
               Text(
                 'Heart Points helps you see which activites are best for your health, and how you\'re preforming against American Heart Association recommendations.',
-                style: Theme.of(context).textTheme.titleSmall,
+                style: Theme.of(context).textTheme.bodySmall,
               ),
               SizedBox(height: 20),
               GestureDetector(

@@ -21,7 +21,7 @@ class _BuildGetMoreAdsCardState extends State<BuildGetMoreAdsCard> {
               children: [
                 Text(
                   'Get more from Fit',
-                  style: Theme.of(context).textTheme.titleMedium,
+                  style: Theme.of(context).textTheme.titleLarge,
                 ),
                 Icon(Icons.clear, size: 20),
               ],
@@ -37,17 +37,17 @@ class _BuildGetMoreAdsCardState extends State<BuildGetMoreAdsCard> {
                 SizedBox(width: 10),
                 Text(
                   'Google Play',
-                  style: Theme.of(context).textTheme.titleSmall,
+                  style: Theme.of(context).textTheme.bodyMedium,
                 ),
               ],
             ),
             SizedBox(height: 15),
             Container(
-              height: 80,
+              height: 50,
               width: double.infinity,
               child: Text(
                 'Fit works well when you connect your other health & fitness apps. Find compatible apps on Google Play to help you stay healthy.',
-                style: Theme.of(context).textTheme.titleSmall,
+                style: Theme.of(context).textTheme.bodySmall,
               ),
             ),
             SizedBox(height: 15),

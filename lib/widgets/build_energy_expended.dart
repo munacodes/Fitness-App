@@ -14,7 +14,7 @@ class _BuildEnergyExpendedState extends State<BuildEnergyExpended> {
       onTap: () {},
       child: Card(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(15.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -31,7 +31,7 @@ class _BuildEnergyExpendedState extends State<BuildEnergyExpended> {
               SizedBox(height: 10),
               Text(
                 'Last 7 days',
-                style: Theme.of(context).textTheme.titleSmall,
+                style: Theme.of(context).textTheme.bodySmall,
               ),
               SizedBox(height: 10),
               Row(
@@ -41,11 +41,11 @@ class _BuildEnergyExpendedState extends State<BuildEnergyExpended> {
                     children: [
                       Text(
                         '23 Cal',
-                        style: Theme.of(context).textTheme.titleMedium,
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
                       Text(
                         'Today',
-                        style: Theme.of(context).textTheme.titleSmall,
+                        style: Theme.of(context).textTheme.bodySmall,
                       ),
                     ],
                   ),

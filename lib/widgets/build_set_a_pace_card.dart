@@ -14,7 +14,7 @@ class _BuildSetAPaceCardState extends State<BuildSetAPaceCard> {
       onTap: () {},
       child: Card(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(15.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -23,7 +23,7 @@ class _BuildSetAPaceCardState extends State<BuildSetAPaceCard> {
                 children: [
                   Text(
                     'Set a pace for your walks',
-                    style: Theme.of(context).textTheme.titleMedium,
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                   Icon(Icons.clear, size: 18),
                 ],
@@ -37,11 +37,11 @@ class _BuildSetAPaceCardState extends State<BuildSetAPaceCard> {
                     width: 200,
                     child: Text(
                       'Follow along with the beat to turn walking into a simple, effective way to exercise,',
-                      style: Theme.of(context).textTheme.titleSmall,
+                      style: Theme.of(context).textTheme.bodySmall,
                     ),
                   ),
                   Container(
-                    height: 80,
+                    height: 60,
                     width: 100,
                     color: Colors.pink,
                   ),

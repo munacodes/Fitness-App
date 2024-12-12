@@ -46,18 +46,12 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: FadeTransition(
         opacity: _fadeAnimation,
-        child: const Center(
+        child: Center(
           child: Text(
             'GOOGLE FIT',
-            style: TextStyle(
-              color: Colors.blue,
-              fontWeight: FontWeight.bold,
-              fontSize: 40,
-              letterSpacing: 3,
-            ),
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
         ),
       ),

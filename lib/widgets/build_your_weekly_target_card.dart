@@ -18,14 +18,17 @@ class _BuildYourWeeklyTargetCardState extends State<BuildYourWeeklyTargetCard> {
         children: [
           Text(
             '$number',
-            style: Theme.of(context).textTheme.titleMedium,
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
           SizedBox(width: 8),
-          Text('of'),
+          Text(
+            'of',
+            style: Theme.of(context).textTheme.bodyMedium,
+          ),
           SizedBox(width: 8),
           Text(
             '150',
-            style: Theme.of(context).textTheme.titleMedium,
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
         ],
       ),
@@ -38,7 +41,7 @@ class _BuildYourWeeklyTargetCardState extends State<BuildYourWeeklyTargetCard> {
       onTap: () {},
       child: Card(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(15.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -55,7 +58,7 @@ class _BuildYourWeeklyTargetCardState extends State<BuildYourWeeklyTargetCard> {
               SizedBox(height: 10),
               Text(
                 'Dec 8 - 14',
-                style: Theme.of(context).textTheme.titleSmall,
+                style: Theme.of(context).textTheme.bodySmall,
               ),
               SizedBox(height: 10),
               Row(
@@ -80,7 +83,7 @@ class _BuildYourWeeklyTargetCardState extends State<BuildYourWeeklyTargetCard> {
                       width: 180,
                       child: Text(
                         'Scoring 150 Heart Points a week can help you live longer, sleep better, and boost your mood',
-                        style: Theme.of(context).textTheme.titleSmall,
+                        style: Theme.of(context).textTheme.bodySmall,
                       ),
                     ),
                   ),
@@ -93,7 +96,7 @@ class _BuildYourWeeklyTargetCardState extends State<BuildYourWeeklyTargetCard> {
                     width: 80,
                     child: Text(
                       'American Heart Association',
-                      style: Theme.of(context).textTheme.titleSmall,
+                      style: Theme.of(context).textTheme.bodySmall,
                     ),
                   ),
                 ],

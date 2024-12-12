@@ -32,10 +32,7 @@ class _BuildListTileCardState extends State<BuildListTileCard> {
                 children: [
                   Text(
                     widget.title,
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                   Icon(Icons.arrow_forward_ios, size: 20),
                 ],
@@ -43,7 +40,7 @@ class _BuildListTileCardState extends State<BuildListTileCard> {
               SizedBox(height: 10),
               Text(
                 widget.subtitle,
-                style: Theme.of(context).textTheme.titleSmall,
+                style: Theme.of(context).textTheme.bodySmall,
               ),
             ],
           ),

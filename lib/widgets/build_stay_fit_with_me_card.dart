@@ -26,7 +26,7 @@ class _BuildStayFitWithMeCardState extends State<BuildStayFitWithMeCard> {
       onTap: () {},
       child: Card(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(15.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -107,11 +107,11 @@ class _BuildStayFitWithMeCardState extends State<BuildStayFitWithMeCard> {
                     width: 200,
                     child: Text(
                       'Learn which factors affect sleep needs, and how to find the right amount for you.',
-                      style: Theme.of(context).textTheme.titleSmall,
+                      style: Theme.of(context).textTheme.bodySmall,
                     ),
                   ),
                   Container(
-                    height: 80,
+                    height: 60,
                     width: 100,
                     color: Colors.pink,
                   ),

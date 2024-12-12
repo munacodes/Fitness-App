@@ -1,7 +1,7 @@
-import 'package:fitness_app/constants/export_constants.dart';
 import 'package:fitness_app/provider/theme_provider.dart';
 import 'package:fitness_app/screens/export_screens.dart';
 import 'package:fitness_app/test.dart';
+import 'package:fitness_app/utils/export_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

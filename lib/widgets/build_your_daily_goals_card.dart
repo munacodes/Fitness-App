@@ -21,7 +21,7 @@ class _BuildYourDailyGoalsCardState extends State<BuildYourDailyGoalsCard> {
         ),
         Text(
           title!,
-          style: Theme.of(context).textTheme.titleMedium,
+          style: Theme.of(context).textTheme.bodyMedium,
         ),
       ],
     );
@@ -33,7 +33,7 @@ class _BuildYourDailyGoalsCardState extends State<BuildYourDailyGoalsCard> {
       onTap: () {},
       child: Card(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(15.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -50,7 +50,7 @@ class _BuildYourDailyGoalsCardState extends State<BuildYourDailyGoalsCard> {
               SizedBox(height: 10),
               Text(
                 'Last 7 days',
-                style: Theme.of(context).textTheme.titleSmall,
+                style: Theme.of(context).textTheme.bodySmall,
               ),
               SizedBox(height: 10),
               Row(
@@ -62,21 +62,21 @@ class _BuildYourDailyGoalsCardState extends State<BuildYourDailyGoalsCard> {
                         children: [
                           Text(
                             '0',
-                            style: Theme.of(context).textTheme.titleMedium,
+                            style: Theme.of(context).textTheme.bodyLarge,
                           ),
                           Text(
                             '/',
-                            style: Theme.of(context).textTheme.titleMedium,
+                            style: Theme.of(context).textTheme.bodyLarge,
                           ),
                           Text(
                             '7',
-                            style: Theme.of(context).textTheme.titleMedium,
+                            style: Theme.of(context).textTheme.bodyLarge,
                           ),
                         ],
                       ),
                       Text(
                         'Achieved',
-                        style: Theme.of(context).textTheme.titleSmall,
+                        style: Theme.of(context).textTheme.bodySmall,
                       ),
                     ],
                   ),

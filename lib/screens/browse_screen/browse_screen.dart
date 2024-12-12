@@ -32,7 +32,7 @@ class _BrowseScreenState extends State<BrowseScreen> {
           Expanded(
             child: Text(
               title,
-              style: Theme.of(context).textTheme.titleMedium,
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
           ),
         ],
@@ -46,7 +46,7 @@ class _BrowseScreenState extends State<BrowseScreen> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(15.0),
             child: Column(
               children: [
                 GestureDetector(
@@ -73,7 +73,7 @@ class _BrowseScreenState extends State<BrowseScreen> {
                           Expanded(
                             child: Text(
                               'Search health data',
-                              style: Theme.of(context).textTheme.titleLarge,
+                              style: Theme.of(context).textTheme.titleMedium,
                             ),
                           ),
                           GestureDetector(
@@ -93,7 +93,7 @@ class _BrowseScreenState extends State<BrowseScreen> {
                                 foregroundColor: Colors.white,
                                 child: Text(
                                   'S',
-                                  style: TextStyle(fontSize: 20),
+                                  style: Theme.of(context).textTheme.titleLarge,
                                 ),
                               ),
                             ),
