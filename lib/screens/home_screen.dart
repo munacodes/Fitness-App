@@ -1,4 +1,4 @@
-import 'package:fitness_app/screens/home_screen/export_home_screens.dart';
+import 'package:fitness_app/constants/export_constants.dart';
 import 'package:fitness_app/widgets/export_widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -35,11 +35,11 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Row(
                 children: [
                   Icon(
-                    Icons.favorite_outline_sharp,
+                    Icons.directions_walk_outlined,
                     color: Colors.blue,
                   ),
                   Text(
-                    'Steps',
+                    'Walk',
                     style: Theme.of(context).textTheme.titleMedium,
                   ),
                 ],
@@ -72,6 +72,43 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Row(
+          children: [
+            CircleAvatar(
+              backgroundColor: Colors.blue.shade900,
+              foregroundColor: Colors.white,
+              child: Text(
+                'S',
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+            SizedBox(width: 10),
+            Container(
+              height: 30,
+              width: 80,
+              decoration: BoxDecoration(
+                color: Colors.blue.shade100,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '1 day',
+                      // style: textSmall,
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                    Icon(Icons.arrow_forward_ios, size: 15),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(15.0),
@@ -80,25 +117,6 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.error_outline_outlined),
-                      ),
-                      SizedBox(width: 10),
-                      CircleAvatar(
-                        backgroundColor: Colors.blue,
-                        foregroundColor: Colors.white,
-                        child: Text(
-                          'S',
-                          style: TextStyle(fontSize: 20),
-                        ),
-                      ),
-                      SizedBox(width: 10),
-                    ],
-                  ),
                   Center(
                     child: CircleAvatar(
                       radius: 50,
@@ -141,19 +159,31 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(height: 20),
                   BuildYourDailyGoalsCard(),
                   SizedBox(height: 10),
+                  BuildYourWeeklyTargetCard(),
+                  SizedBox(height: 10),
                   Text(
                     'TRENDS',
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                   SizedBox(height: 10),
-                  TrendsSection(),
+                  BuildHeartPointsCard(),
                   SizedBox(height: 10),
+                  BuildStepsCard(),
+                  SizedBox(height: 10),
+                  BuildEnergyExpended(),
+                  SizedBox(height: 15),
                   Text(
                     'DISCOVER',
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
+                  SizedBox(height: 15),
+                  BuildASimpleWayToStayHealthyCard(),
                   SizedBox(height: 10),
-                  DiscoverSection(),
+                  BuildHowMuchSleepCard(),
+                  SizedBox(height: 10),
+                  BuildStayFitWithMeCard(),
+                  SizedBox(height: 10),
+                  BuildSetAPaceCard(),
                 ],
               ),
             ),

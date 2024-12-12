@@ -49,33 +49,58 @@ class _BrowseScreenState extends State<BrowseScreen> {
             padding: const EdgeInsets.all(10.0),
             child: Column(
               children: [
-                Container(
-                  height: 55,
-                  width: MediaQuery.of(context).size.width,
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Row(
-                    children: [
-                      Icon(Icons.search_sharp, size: 30),
-                      SizedBox(width: 10),
-                      Expanded(
-                        child: Text(
-                          'Search health data',
-                          style: Theme.of(context).textTheme.titleLarge,
-                        ),
+                GestureDetector(
+                  onTap: () {
+                    showSearch(
+                      context: context,
+                      delegate: SearchSection(),
+                    );
+                  },
+                  child: Card(
+                    elevation: 4,
+                    child: Container(
+                      height: 55,
+                      width: MediaQuery.of(context).size.width,
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(),
                       ),
-                      CircleAvatar(
-                        backgroundColor: Colors.blue,
-                        foregroundColor: Colors.white,
-                        child: Text(
-                          'S',
-                          style: TextStyle(fontSize: 20),
-                        ),
+                      child: Row(
+                        children: [
+                          Icon(Icons.search_sharp, size: 30),
+                          SizedBox(width: 10),
+                          Expanded(
+                            child: Text(
+                              'Search health data',
+                              style: Theme.of(context).textTheme.titleLarge,
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              ShowFlutterToastOrSnackBar()
+                                  .showFlutterToastMessage(
+                                message: 'Clicked on my Profile Icon',
+                                gravity: ToastGravity.BOTTOM,
+                              );
+                              print('Clicked on my Profile Icon');
+                            },
+                            child: Card(
+                              elevation: 2,
+                              shape: CircleBorder(),
+                              child: CircleAvatar(
+                                backgroundColor: Colors.blue.shade900,
+                                foregroundColor: Colors.white,
+                                child: Text(
+                                  'S',
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ],
+                    ),
                   ),
                 ),
                 SizedBox(height: 30),

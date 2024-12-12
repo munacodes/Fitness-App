@@ -73,7 +73,7 @@ class _SleepState extends State<Sleep> {
                 SizedBox(height: 20),
                 BuildHowMuchSleepCard(),
                 SizedBox(height: 10),
-                GetMoreAdsCard(),
+                BuildGetMoreAdsCard(),
                 Padding(
                   padding: const EdgeInsets.only(top: 15.0, bottom: 15),
                   child: Text(

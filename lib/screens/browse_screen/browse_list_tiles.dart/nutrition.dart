@@ -71,7 +71,7 @@ class _NutritionState extends State<Nutrition> {
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
                 SizedBox(height: 20),
-                GetMoreAdsCard(),
+                BuildGetMoreAdsCard(),
                 Padding(
                   padding: const EdgeInsets.only(top: 15.0, bottom: 15),
                   child: Text(

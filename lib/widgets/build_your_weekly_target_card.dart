@@ -79,7 +79,7 @@ class _BuildYourWeeklyTargetCardState extends State<BuildYourWeeklyTargetCard> {
                     child: Container(
                       width: 180,
                       child: Text(
-                        'Scoring 150 Heart Points a week can help you',
+                        'Scoring 150 Heart Points a week can help you live longer, sleep better, and boost your mood',
                         style: Theme.of(context).textTheme.titleSmall,
                       ),
                     ),

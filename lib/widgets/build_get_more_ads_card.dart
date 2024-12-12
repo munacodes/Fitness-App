@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class GetMoreAdsCard extends StatefulWidget {
-  const GetMoreAdsCard({super.key});
+class BuildGetMoreAdsCard extends StatefulWidget {
+  const BuildGetMoreAdsCard({super.key});
 
   @override
-  State<GetMoreAdsCard> createState() => _GetMoreAdsCardState();
+  State<BuildGetMoreAdsCard> createState() => _BuildGetMoreAdsCardState();
 }
 
-class _GetMoreAdsCardState extends State<GetMoreAdsCard> {
+class _BuildGetMoreAdsCardState extends State<BuildGetMoreAdsCard> {
   @override
   Widget build(BuildContext context) {
     return Card(

@@ -1,6 +1,13 @@
 export 'package:fitness_app/widgets/build_elevated_button.dart';
-export 'package:fitness_app/widgets/get_more_ads_card.dart';
+export 'package:fitness_app/widgets/build_get_more_ads_card.dart';
 export 'package:fitness_app/widgets/build_list_tile_card.dart';
 export 'package:fitness_app/widgets/build_how_much_sleep_card.dart';
 export 'package:fitness_app/widgets/build_your_daily_goals_card.dart';
 export 'package:fitness_app/widgets/build_your_weekly_target_card.dart';
+export 'package:fitness_app/widgets/build_heart_points_card.dart';
+export 'package:fitness_app/widgets/build_steps_card.dart';
+export 'package:fitness_app/widgets/build_energy_expended.dart';
+export 'package:fitness_app/widgets/build_score_more_points_card.dart';
+export 'package:fitness_app/widgets/build_stay_fit_with_me_card.dart';
+export 'package:fitness_app/widgets/build_set_a_pace_card.dart';
+export 'package:fitness_app/widgets/build_a_simple_way_to_stay_healthy_card.dart';
