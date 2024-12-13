@@ -3,6 +3,7 @@ import 'package:fitness_app/provider/export_providers.dart';
 import 'package:fitness_app/screens/export_screens.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -13,6 +14,7 @@ class AuthScreen extends StatefulWidget {
 
 class _AuthScreenState extends State<AuthScreen> {
   bool isLoading = false;
+  bool? isRegistered; // To hold the registration status
 
   Future<void> _handleGoogleSignIn(BuildContext context) async {
     setState(() => isLoading = true);
@@ -41,13 +43,6 @@ class _AuthScreenState extends State<AuthScreen> {
                 : Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text(
-                        'Hey, Welcome Back.',
-                        style: TextStyle(
-                            fontSize: 24, fontWeight: FontWeight.bold),
-                        textAlign: TextAlign.center,
-                      ),
-                      const SizedBox(height: 10),
                       const Text(
                         'Login with your account to continue.',
                         style: TextStyle(fontSize: 16),

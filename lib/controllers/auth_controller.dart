@@ -3,6 +3,7 @@ import 'package:fitness_app/utils/export_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthController {
   final GoogleSignIn _googleSignIn =
@@ -23,8 +24,15 @@ class AuthController {
           gravity: ToastGravity.BOTTOM,
         );
       } else {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => MainScreen()));
+        // Save registration status in SharedPreferences
+        SharedPreferences prefs = await SharedPreferences.getInstance();
+        await prefs.setBool('isRegistered', true);
+
+        // Navigate to SplashScreen
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const SplashScreen()),
+        );
         ShowFlutterToastOrSnackBar().showFlutterToastMessage(
           message: 'Welcome, ${user.displayName}!',
           gravity: ToastGravity.BOTTOM,

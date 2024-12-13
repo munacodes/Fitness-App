@@ -1,3 +1,4 @@
+import 'package:fitness_app/controllers/export_auth_controller.dart';
 import 'package:fitness_app/provider/export_providers.dart';
 import 'package:fitness_app/screens/export_screens.dart';
 import 'package:fitness_app/test.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: themeProvider.themeMode,
-      home: WelcomeScreen(),
+      home: MainAuthController(),
     );
   }
 }
