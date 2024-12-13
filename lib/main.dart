@@ -1,4 +1,4 @@
-import 'package:fitness_app/provider/theme_provider.dart';
+import 'package:fitness_app/provider/export_providers.dart';
 import 'package:fitness_app/screens/export_screens.dart';
 import 'package:fitness_app/test.dart';
 import 'package:fitness_app/utils/export_utils.dart';
@@ -7,9 +7,12 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (_) => ThemeProvider(),
-      child: MyApp(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ThemeProvider()),
+        ChangeNotifierProvider(create: (_) => UserProvider()),
+      ],
+      child: const MyApp(),
     ),
   );
 }

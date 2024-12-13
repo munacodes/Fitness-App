@@ -1,5 +1,7 @@
+import 'package:fitness_app/provider/export_providers.dart';
 import 'package:fitness_app/screens/export_screens.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -45,13 +47,37 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   Widget build(BuildContext context) {
+    final userProvider = Provider.of<UserProvider>(context);
+
     return Scaffold(
       body: FadeTransition(
         opacity: _fadeAnimation,
         child: Center(
-          child: Text(
-            'GOOGLE FIT',
-            style: Theme.of(context).textTheme.bodyLarge,
+          child: Column(
+            children: [
+              Text(
+                'Welcome, ${userProvider.user!.name}!',
+                style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 10),
+              Text(
+                'To',
+                style: Theme.of(context).textTheme.bodyLarge,
+              ),
+              const SizedBox(height: 20),
+              Text(
+                'FITNESS',
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              const SizedBox(height: 20),
+              Text(
+                'Everything we do is to make you FIT',
+                style: Theme.of(context).textTheme.bodyLarge,
+              ),
+            ],
           ),
         ),
       ),

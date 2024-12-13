@@ -34,9 +34,28 @@ final ThemeData lightTheme = ThemeData(
       color: Colors.white,
     ),
   ),
-  searchBarTheme: SearchBarThemeData(
-    backgroundColor: WidgetStateProperty.all(Colors.purple),
-  ),
+  // searchBarTheme: SearchBarThemeData(
+  //   backgroundColor: MaterialStateProperty.all(Colors.purple.shade700),
+  //   elevation: MaterialStateProperty.all(5),
+  //   overlayColor: MaterialStateProperty.all(Colors.purple.shade900),
+  //   surfaceTintColor: MaterialStateProperty.all(Colors.purple.shade900),
+  //   padding: MaterialStateProperty.all(EdgeInsets.all(8)),
+  //   shape: MaterialStateProperty.all(RoundedRectangleBorder(
+  //     borderRadius: BorderRadius.circular(10),
+  //   )),
+  //   side: MaterialStateProperty.all(BorderSide(
+  //     color: Colors.white70,
+  //     width: 1.5,
+  //   )),
+  //   hintStyle: MaterialStateProperty.all(TextStyle(
+  //     color: Colors.white70,
+  //     fontSize: 16,
+  //   )),
+  //   textStyle: MaterialStateProperty.all(TextStyle(
+  //     color: Colors.white,
+  //     fontSize: 18,
+  //   )),
+  // ),
   textTheme: TextTheme(
     titleSmall: TextStyle(
       color: Colors.white,

@@ -72,6 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         titleTextStyle: Theme.of(context).textTheme.titleLarge,
         iconTheme: IconThemeData(),
         title: Row(
